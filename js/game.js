@@ -9,15 +9,24 @@
 
   document.querySelector('button').addEventListener('click', function buttonClicked() {
 
-    // var dieNumOne = document.querySelector('.dice aside:first-child').innerText;
-document.querySelector('.dice aside:first-child').innerText = result[0]
-document.querySelector('.dice aside:last-child').innerText = 5
-
-
-
-
     var result = game.rollDice();
-    console.log(result);
+
+    // var dieNumOne = document.querySelector('.dice aside:first-child').innerText;
+document.querySelector('.dice aside:first-child').innerText = result[0];
+document.querySelector('.dice aside:last-child').innerText = result[1];
+
+
+  if ((result[0] + result[1]) === 7) {
+    console.log("Winner");
+  }
+  else if ((result[0] + result[1]) === 11) {
+    console.log("Winner");
+  }
+  else {
+    console.log("Try Again");
+  }
+
+
 
 
 
