@@ -1,22 +1,27 @@
 main {
   border: 1px solid #000000;
   margin: 0 auto;
-  width: 40%;
-  height: 200px;
+  width: 60%;
+  height: 400px;
   background-color: #dbe1d1; }
+  main h2 {
+    text-align: center; }
+  main .game-start {
+    text-align: center; }
+  main .message {
+    text-align: center; }
 
 section {
   background-color: blue;
   border: 2px solid black;
   width: 70%;
-  margin: 0 auto;
-  height: 70%; }
+  margin: 60px auto 10px auto;
+  height: 30%; }
   section aside {
     background-color: yellow;
     border: 1px solid black;
     height: 40px;
     width: 30%;
-    margin: 0 auto;
-    margin-top: 30%; }
+    margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,8 @@
 
   document.querySelector('button').addEventListener('click', function buttonClicked() {
 
+    // Storing random dice numbers into array
+
     var result = game.rollDice();
 
     // var dieNumOne = document.querySelector('.dice aside:first-child').innerText;
@@ -16,18 +18,37 @@ document.querySelector('.dice aside:first-child').innerText = result[0];
 document.querySelector('.dice aside:last-child').innerText = result[1];
 
 
+
+
+
+  // Winner calculation Logic
+
   if ((result[0] + result[1]) === 7) {
-    console.log("Winner");
+    // console.log("Winner");
+    document.querySelector("h2").innerText = "Winner";
   }
   else if ((result[0] + result[1]) === 11) {
-    console.log("Winner");
+    // console.log("Winner");
+    document.querySelector("h2").innerText = "Winner";
   }
   else {
-    console.log("Try Again");
+    document.querySelector("h2").innerText = "Try Again";
   }
 
 
+  // Game started stamp
 
+  document.querySelector(".game-start").innerText = "Game Started "+game.startDate;
+
+
+
+  // Tracking number of rolls to win
+
+  document.querySelector('button')
+  var countClick = 0;
+
+
+  document.querySelector(".message").innerText = "(It took you ____ tries and ____ Seconds)";
 
 
 
@@ -44,13 +65,6 @@ document.querySelector('.dice aside:last-child').innerText = result[1];
       return [firstDice, secondDice];
     }
 
-
   };
-
-
-
-
-
-
 
 })();
