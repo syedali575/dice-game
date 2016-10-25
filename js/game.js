@@ -7,6 +7,10 @@
 
 
 
+
+
+
+
   document.querySelector('button').addEventListener('click', function buttonClicked() {
 
     // Storing random dice numbers into array
@@ -16,6 +20,20 @@
     // var dieNumOne = document.querySelector('.dice aside:first-child').innerText;
 document.querySelector('.dice aside:first-child').innerText = result[0];
 document.querySelector('.dice aside:last-child').innerText = result[1];
+
+// Game started stamp
+
+document.querySelector(".game-start").innerText = "Game Started "+game.startDate;
+
+
+
+
+// Tracking number of rolls to win
+
+    var currentRoundRoll = 0;
+    currentRoundRoll += 1;
+    console.log(currentRoundRoll);
+
 
 
 
@@ -33,19 +51,13 @@ document.querySelector('.dice aside:last-child').innerText = result[1];
   }
   else {
     document.querySelector("h2").innerText = "Try Again";
+
+
+
   }
 
 
-  // Game started stamp
 
-  document.querySelector(".game-start").innerText = "Game Started "+game.startDate;
-
-
-
-  // Tracking number of rolls to win
-
-  document.querySelector('button')
-  var countClick = 0;
 
 
   document.querySelector(".message").innerText = "(It took you ____ tries and ____ Seconds)";
