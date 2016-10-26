@@ -8,7 +8,7 @@
 
       // Creation of Object
       var game = {
-        startDate: new Date,
+        startDate: new Date(),
         gameRounds: [  { roll:0, time:new Date() }  ],
         rollDice: function rollingDice () {
           var firstDice = Math.ceil(Math.random() * 6);
@@ -17,10 +17,16 @@
         }
       };
 
-      // Game start time stamp
-      var startTime = game.startDate.getTime();
-      // console.log(startTime);
-      document.querySelector(".game-start").innerText = "Game Started "+game.startDate.getFullYear() + "-" +(game.startDate.getMonth()+1) + " at " + startTime;
+      // Game start time stamps
+      var startHour = game.startDate.getHours();
+      var startMinute = game.startDate.getMinutes();
+      var gameStartTime = game.startDate.getTime();
+      console.log(gameStartTime);
+      // console.log(new Date().getHours());
+      // console.log(game.startDate.getMinutes());
+
+
+      document.querySelector(".game-start").innerText = "Game Started "+game.startDate.getFullYear() + "-" +(game.startDate.getMonth()+1) + "-" +game.startDate.getDate()+" at " + startHour + ":" + startMinute;;
 
 
        // Button click function
@@ -34,22 +40,26 @@
         document.querySelector('.dice aside:last-child').innerText = result[1];
 
 
-        // Game end time stamp
-        var endTime = game.gameRounds[game.gameRounds.length -1].time.getTime();
-        console.log(endTime);
-
-
         // Tracking number of rolls to win
         game.gameRounds[game.gameRounds.length - 1].roll += 1;
         // console.log(game.gameRounds[game.gameRounds.length - 1].roll);
 
-          // time to win
-          var timeDiff = endTime - startTime;
-          console.log(timeDiff);
 
           // // Tracking time to win
           // game.gameRounds[game.gameRounds.length -1].time.getTime();
           // console.log(game.gameRounds[game.gameRounds.length -1].time.getTime());
+
+          // // time to win
+          // var timeDiff = endTime - startTime;
+          // console.log(timeDiff);
+
+          // // Game end time stamp
+          // var endTime = game.gameRounds[game.gameRounds.length -1].time.getTime();
+          // console.log(endTime);
+
+
+
+
 
 
 
@@ -57,11 +67,19 @@
         if ((result[0] + result[1]) === 7) {
           // console.log("Winner");
           document.querySelector("h2").innerText = "Winner";
-          document.querySelector(".message").innerText = "It took you " + game.gameRounds[game.gameRounds.length - 1].roll + " tries and Seconds)";
+          var nowDate = new Date();
+          var winTime = (nowDate.getSeconds() - game.startDate.getSeconds());
+          console.log(winTime);
+          document.querySelector(".message").innerText = "It took you " + game.gameRounds[game.gameRounds.length - 1].roll + " tries and "+winTime+" Seconds";
+
+
         }
         else if ((result[0] + result[1]) === 11) {
           // console.log("Winner");
           document.querySelector("h2").innerText = "Winner";
+          document.querySelector(".message").innerText = "It took you " + game.gameRounds[game.gameRounds.length - 1].roll + " tries and "+winTime+" Seconds";
+          var winTime = game.startDate.getTime();
+          console.log(winTime);
         }
         else {
           document.querySelector("h2").innerText = "Try Again";
