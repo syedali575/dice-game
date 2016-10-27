@@ -1,2 +1,2 @@
 # dice-game
-The beginnings of a dice game for students of The Iron Yard.
+To play this game a user clicks the roll dice button. If the sum of both dice is either 7 or 11; user wins.

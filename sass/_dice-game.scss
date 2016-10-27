@@ -1,21 +1,35 @@
 main {
   border: 1px solid #000000;
   margin: 0 auto;
-  width: 60%;
+  width: 500px;
   height: 400px;
-  background-color: #dbe1d1;
+  background-color: #FDFDFD;
+  border-radius: 10px;
 
-h2 {
-  text-align: center;
-}
+    h2 {
+      text-align: center;
+    }
 
-.game-start {
-  text-align: center;;
-}
+    .game-start {
+      text-align: center;
+      font-size: .8em;
+      margin-top: 60px;
+    }
 
-.message {
-  text-align: center;
-}
+    .message {
+      text-align: center;
+      font-size: .8em;
+
+
+    }
+
+    button {
+      margin: 0 0 0 205px;
+      height: 40px;
+      border-radius: 10px;
+      color: #FDFDFD;
+      background-color: #ADA9A9;
+    }
 
 
 }

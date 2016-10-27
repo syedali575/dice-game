@@ -1,27 +1,43 @@
 main {
   border: 1px solid #000000;
   margin: 0 auto;
-  width: 60%;
+  width: 500px;
   height: 400px;
-  background-color: #dbe1d1; }
+  background-color: #FDFDFD;
+  border-radius: 10px; }
   main h2 {
     text-align: center; }
   main .game-start {
-    text-align: center; }
+    text-align: center;
+    font-size: .8em;
+    margin-top: 60px; }
   main .message {
-    text-align: center; }
+    text-align: center;
+    font-size: .8em; }
+  main button {
+    margin: 0 0 0 205px;
+    height: 40px;
+    border-radius: 10px;
+    color: #FDFDFD;
+    background-color: #ADA9A9; }
 
 section {
-  background-color: blue;
-  border: 2px solid black;
   width: 70%;
   margin: 60px auto 10px auto;
   height: 30%; }
   section aside {
-    background-color: yellow;
+    background-color: #EFF3F0;
     border: 1px solid black;
-    height: 40px;
-    width: 30%;
-    margin: 0 auto; }
+    height: 50px;
+    width: 20%;
+    float: left;
+    margin: 20px 30px 20px 55px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: 20px; }
+
+h1 {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
